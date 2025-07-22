@@ -13,12 +13,9 @@ const About = () => {
 
       <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
 
-        {/* Layout image + texte */}
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-12"></div>
-        
-        
+                
         {/* LEFT: Image with circle behind */}
-        <div className="relative w-full lg:w-1/2 flex justify-center transform -translate-x-20">
+        <div className="relative w-full lg:w-1/2 flex justify-center transform lg:-translate-x-20">
           <RedCircleBehind />
           <img
             src={profileImage}
@@ -28,7 +25,7 @@ const About = () => {
         </div>
 
         {/* RIGHT: Text content */}
-        <div className="w-full lg:w-1/2 space-y-3 transform -translate-x-10 animate-slide-in-right">
+        <div className="w-full lg:w-1/2 space-y-3 transform lg:-translate-x-10 animate-slide-in-right">
 
           <p className="mt-6 text-lg leading-relaxed">
             <strong>Geomatics Engineer and Full-Stack Developer</strong>, I design innovative solutions 

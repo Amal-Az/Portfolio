@@ -11,4 +11,3 @@ export default function BackgroundBlob() {
 }
 
 
-// #F50D0D

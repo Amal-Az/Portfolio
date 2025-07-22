@@ -33,25 +33,25 @@ const Contact = () => {
         {/* Form */}
         <form className="space-y-5">
           <div className="flex flex-col md:flex-row gap-6">
-            <input
+            <input required
               type="text"
               placeholder="First Name"
               className="w-full p-3 rounded-md text-black"
             />
-            <input
+            <input required
               type="text"
               placeholder="Last Name"
               className="w-full p-3 rounded-md text-black"
             />
           </div>
 
-          <input
+          <input required
             type="tel"
             placeholder="Mobile Number"
             className="w-full p-3 rounded-md text-black"
           />
 
-          <input
+          <input required
             type="email"
             placeholder="Email Address"
             className="w-full p-3 rounded-md text-black"
@@ -65,6 +65,8 @@ const Contact = () => {
 
           <button
             type="submit"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="mt-4 bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-md font-semibold"
           >
             Send Message

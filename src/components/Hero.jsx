@@ -39,10 +39,11 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col lg:flex-row items-start justify-center min-h-screen pt-48 px-8 lg:px-24 bg-[#0c0c3f] gap-12">
+   <section className="relative flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen pt-24 lg:pt-48 px-6 lg:px-24 bg-[#0c0c3f] gap-12">
+
       
       {/* Partie gauche : texte + icônes + bouton + toolbox */}
-      <div className="flex-1 z-10 max-w-xl text-left animate-slide-in-right">
+      <div className="flex-1 z-10 max-w-xl text-left animate-slide-in-right order-2 lg:order-1">
         <h3 className="text-lg font-semibold text-white mb-1">Hello It’s Me</h3>
         <h1 className="text-5xl font-bold text-white mb-2">Azour Amal</h1>
         <h2 className="text-2xl font-bold text-white mb-6 flex flex-wrap gap-2 items-center">
@@ -73,7 +74,7 @@ export default function Hero() {
 
         {/* Bouton de téléchargement du CV */}
         <a
-          href="/public/Mon CV.pdf" 
+          href="/CV.pdf" 
           download
           className="inline-flex bg-red-600 px-6 py-2 rounded-full text-white font-semibold items-center gap-2
              shadow-[0_0_10px_rgba(255,0,0,0.5)] hover:shadow-[0_0_20px_8px_rgba(255,0,0,0.7)]
@@ -102,8 +103,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Partie droite : photo + animation */}
-      <div className="flex-1 flex justify-center items-center -mt-14">
+      {/*Partie droite : photo + animation */}
+      <div className="flex-1 flex justify-center items-center -mt-14 order-1 lg:order-2">
         <div className="relative w-80 h-80 lg:w-96 lg:h-96">
           <div className="absolute inset-0 z-0">
             <BackgroundBlob />

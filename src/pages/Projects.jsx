@@ -1,14 +1,15 @@
 import GrotteProject from '../assets/GrotteProject.png';  
 import LoungeProject from '../assets/LoungeProject.png';
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <div className="Projects-container h-full px-8 py-4 bg-[#0D0B3C]">
+    <div className="Projects-container min-h-screen px-8 py-4 bg-[#0D0B3C] animate-slide-in-right">
       <h1 className="text-4xl font-bold flex justify-center mt-28 mb-12 text-white">Projects</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
         {/* Project 1 */}
-        <div className="max-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+        <div className=" max-w-full bg-white border border-gray-200 rounded-lg shadow-sm transition-transform duration-300 hover:scale-[1.02]">
           <img
             className="rounded-t-lg w-full"
             src={GrotteProject}
@@ -25,7 +26,7 @@ export default function Projects() {
               href="https://mr-fannah.github.io/grottes.maroc/#Accueil"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-red-500"
             >
               Read more
               <svg
@@ -48,9 +49,15 @@ export default function Projects() {
         </div>
 
         {/* Project 2 */}
-        <div className="max-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}        
+          whileInView={{ opacity: 1, x: 0 }}       
+          transition={{ duration: 0.8 }}          
+          viewport={{ once: true, amount: 0.4 }}   
+          className="max-w-full bg-white border border-gray-200 rounded-lg shadow-sm"
+        >
           <img
-            className="rounded-t-lg w-full"
+            className="rounded-t-lg w-full "
             src={LoungeProject}
             alt="LoungePilot Project"
           />
@@ -65,7 +72,7 @@ export default function Projects() {
               href="https://consofy.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-red-500"
             >
               Read more
               <svg
@@ -85,7 +92,7 @@ export default function Projects() {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

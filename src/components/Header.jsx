@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react'; 
-import portfolio1 from '../assets/portfolio1.png';
+import amalAz from '../assets/amalAz.png';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ export default function Header() {
       <nav className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto relative">
         {/* Logo */}
         <div className="w-16 h-16">
-          <img src={portfolio1} alt="Logo" className="w-full h-full object-contain scale-125" />
+          <img src={amalAz} alt="Logo" className="w-full h-full object-contain scale-125" />
         </div>
 
         {/* Desktop nav */}
